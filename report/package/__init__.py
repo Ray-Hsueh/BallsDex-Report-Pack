@@ -1,4 +1,5 @@
 import logging
+import textwrap
 from typing import TYPE_CHECKING
 
 from .cog import ReportCog
@@ -8,12 +9,12 @@ if TYPE_CHECKING:
 
 log = logging.getLogger("ballsdex.packages.report")
 
-LOGO = """
-╔═══════════════════════════════════════╗
-║  Ballsdex Report Pack by Ray Hsueh    ║
-║        Licensed under Apache 2.0      ║
-╚═══════════════════════════════════════╝
-"""
+LOGO = textwrap.dedent(r"""
+    ╔═══════════════════════════════════════╗
+    ║   Ballsdex Report Pack by Ray Hsueh   ║
+    ║       Licensed under Apache 2.0       ║
+    ╚═══════════════════════════════════════╝
+""").strip()
 
 
 async def setup(bot: "BallsDexBot"):

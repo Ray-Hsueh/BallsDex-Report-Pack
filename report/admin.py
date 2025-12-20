@@ -87,16 +87,7 @@ class ReportAdmin(admin.ModelAdmin):
     ordering = ("-created_at",)
     date_hierarchy = "created_at"
 
-    @admin.display(description="Status", ordering="replied")
-    def status_badge(self, obj):
-        """Display status with colored badge."""
-        if obj.replied:
-            return format_html(
-                '<span style="color: white; background-color: green; padding: 3px 10px; border-radius: 3px;">Replied</span>'
-            )
-        return format_html(
-            '<span style="color: white; background-color: orange; padding: 3px 10px; border-radius: 3px;">Pending</span>'
-        )
+
 
     def has_add_permission(self, request):
         """Disable manual report creation - reports should come from Discord."""

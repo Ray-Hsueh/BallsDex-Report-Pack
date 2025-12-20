@@ -1,7 +1,8 @@
 from __future__ import annotations
 
 from typing import TYPE_CHECKING, Any, Self
-
+from django.contrib import admin
+from django.utils.html import format_html
 from django.db import models
 
 if TYPE_CHECKING:
@@ -124,3 +125,14 @@ class Report(models.Model):
     def status(self) -> str:
         """Return the current status of the report."""
         return "Replied" if self.replied else "Pending"
+
+    @admin.display(description="Status", ordering="replied")
+    def status_badge(self):
+        """Display status with colored badge."""
+        if self.replied:
+            return format_html(
+                '<span style="color: white; background-color: green; padding: 3px 10px; border-radius: 3px;">Replied</span>'
+            )
+        return format_html(
+            '<span style="color: white; background-color: orange; padding: 3px 10px; border-radius: 3px;">Pending</span>'
+        )
