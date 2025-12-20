@@ -77,3 +77,12 @@ A standardized BallsDex 3.0 package that allows users to submit reports (bugs, v
 ### Admin Reply
 *   Click **Reply** button on report message in Discord
 *   Or edit via Admin Panel
+
+## Updating
+
+To update the package to the latest version, run the following command to rebuild the container without using the cache:
+
+```bash
+docker compose build --no-cache
+docker compose up -d
+```

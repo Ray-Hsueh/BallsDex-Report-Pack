@@ -10,15 +10,15 @@ if TYPE_CHECKING:
 log = logging.getLogger("ballsdex.packages.report")
 
 LOGO = textwrap.dedent(r"""
-    ╔═══════════════════════════════════════╗
-    ║   Ballsdex Report Pack by Ray Hsueh   ║
-    ║       Licensed under Apache 2.0       ║
-    ╚═══════════════════════════════════════╝
+    +---------------------------------------+
+    |   Ballsdex Report Pack by Ray Hsueh   |
+    |       Licensed under Apache 2.0       |
+    +---------------------------------------+
 """).strip()
 
 
 async def setup(bot: "BallsDexBot"):
-    log.info(LOGO)
+    print(LOGO)
     log.info("Loading Report package...")
     await bot.add_cog(ReportCog(bot))
     log.info("Report package loaded successfully!")
