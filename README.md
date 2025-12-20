@@ -31,6 +31,7 @@ A standardized BallsDex 3.0 package that allows users to submit reports (bugs, v
    location = "git+https://github.com/Ray-Hsueh/BallsDex-Report-Pack.git"
    path = "report"
    enabled = true
+   editable = false
    ```
    
    **Example of multiple packages:**
@@ -40,12 +41,14 @@ A standardized BallsDex 3.0 package that allows users to submit reports (bugs, v
    location = "git+https://github.com/example/package1.git"
    path = "package1"
    enabled = true
+   editable = false
    
    # Second package (Report Pack)
    [[ballsdex.packages]]
    location = "git+https://github.com/Ray-Hsueh/BallsDex-Report-Pack.git"
    path = "report"
    enabled = true
+   editable = false
    ```
 
 2. **Build and Launch**
