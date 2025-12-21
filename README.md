@@ -6,7 +6,7 @@
 A standardized BallsDex 3.0 package that allows users to submit reports (bugs, violations, suggestions) to the backend. Administrators can view, manage, and reply to reports via the Django Admin Panel.
 
 > [!NOTE]
-> This pioneering initiative supports Laggron's 3.0 vision for Ballsdex, representing a fresh approach to standardised suite integration. I selected the “report” system as the pilot project, as it is the most streamlined system among all my suites. However, as this is the first attempt, please do report any issues encountered!
+> This pioneering initiative supports Laggron's 3.0 vision for Ballsdex, representing a fresh approach to standardised package integration. I selected the “report” system as the pilot project, as it is the simplest one among all my packs. However, as this is the first attempt, please do report any issues encountered!
 
 ## Features
 
